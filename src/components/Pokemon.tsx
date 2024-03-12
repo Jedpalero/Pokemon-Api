@@ -13,7 +13,7 @@ const Pokemon = () => {
     refetch();
   };
 
-  const img: string = data?.sprites.other.showdown.front_default;
+  const img: string = data?.pokemon.sprites.other.showdown.front_default;
 
   return (
     <div className="flex">

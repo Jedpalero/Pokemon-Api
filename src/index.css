@@ -142,7 +142,7 @@ code {
       @apply w-[10rem] text-center;
     }
     .card1 {
-      @apply flex flex-col items-center m-auto justify-between size-[25rem] rounded-xl mt-10 relative overflow-hidden z-[10];
+      @apply flex m-auto justify-center size-[25rem] rounded-xl mt-10 overflow-hidden z-[10];
     }
     .card2 {
       @apply bg-white absolute w-[25rem] h-[35rem] rounded-xl ml-[38rem] mt-[6rem];
@@ -193,7 +193,7 @@ code {
       @apply size-[140px] ml-3;
     }
     .card1 {
-      @apply flex flex-col items-center m-auto justify-between size-[25rem] rounded-xl mt-[7rem] relative overflow-hidden z-[10];
+      @apply flex m-auto justify-center size-[25rem] rounded-xl mt-[7rem] overflow-hidden z-[10];
     }
     .card2 {
       @apply bg-white absolute w-[25rem] h-[40rem] rounded-xl ml-[50rem] mt-[12rem];

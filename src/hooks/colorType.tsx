@@ -17,6 +17,7 @@ export type ColorProps = {
   psychic: string;
   rock: string;
   steel: string;
+  [key: string]: string;
 };
 
 export const backgroundColors: ColorProps = {
