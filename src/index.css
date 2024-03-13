@@ -33,8 +33,8 @@ code {
     }
   }
 
-  .button {
-    width: 140px;
+  .shinning {
+    /* width: 140px; */
     border-radius: 100%;
     aspect-ratio: 1;
     background: linear-gradient(
@@ -43,7 +43,7 @@ code {
         #fff 50%,
         #0000 calc(50% + 40px)
       )
-      bottom right/calc(200% + 80px) calc(200% + 80px) black;
+      bottom right/calc(200% + 80px) calc(200% + 80px);
     animation: l8 1s infinite;
   }
   @keyframes l8 {
@@ -58,24 +58,7 @@ code {
 }
 
 @layer components {
-  /* Pokemon types */
-
-  .bug {
-    @apply bg-[#A7B723];
-  }
-  .water {
-    background-color: #6493eb;
-  }
-  .dark {
-    @apply bg-[#75574C];
-  }
-  .electric {
-    background-color: #f9cf30;
-  }
-  .fire {
-    background-color: #f57d31;
-  }
-
+  /* set the input field autofill transparent */
   .autofill-text:-webkit-autofill {
     -webkit-text-fill-color: black;
   }
@@ -142,10 +125,10 @@ code {
       @apply w-[10rem] text-center;
     }
     .card1 {
-      @apply flex m-auto justify-center size-[25rem] rounded-xl mt-10 overflow-hidden z-[10];
+      @apply flex ml-[18rem] justify-center size-[22rem] rounded-xl mt-3 overflow-hidden z-[10];
     }
     .card2 {
-      @apply bg-white absolute w-[25rem] h-[35rem] rounded-xl ml-[38rem] mt-[6rem];
+      @apply bg-white absolute w-[25rem] h-[38rem] rounded-xl ml-[37rem] mt-[6rem];
     }
   }
 
@@ -193,7 +176,7 @@ code {
       @apply size-[140px] ml-3;
     }
     .card1 {
-      @apply flex m-auto justify-center size-[25rem] rounded-xl mt-[7rem] overflow-hidden z-[10];
+      @apply flex m-auto justify-center size-[25rem] rounded-xl mt-[3rem] overflow-hidden z-[10];
     }
     .card2 {
       @apply bg-white absolute w-[25rem] h-[40rem] rounded-xl ml-[50rem] mt-[12rem];

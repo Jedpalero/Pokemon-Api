@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { ColorProps, backgroundColors } from "../hooks/colorType";
 import usePokemonFetch from "../hooks/usePokemonFetch";
 import pokeball from "../assets/pokeball.png";
@@ -24,15 +23,8 @@ type statsProps = {
   };
 };
 
-// const chart = [
-//   { category: "HP", value: 39 },
-//   { category: "ATK", value: 52 },
-//   // ... other categories
-// ];
-
 const LandingPage = () => {
   const { data } = usePokemonFetch();
-  // const [color, setColor] = useState("white");
 
   const name: string = data?.pokemon.name;
   const id: string = data?.pokemon?.id;
@@ -46,8 +38,6 @@ const LandingPage = () => {
   const str = "" + id;
   const pad = "000";
   const ids = pad.substring(0, pad.length - str.length) + str;
-
-  // const style = type + " ml-[22rem] h-[30rem] w-[25rem] rounded-xl mt-10";
 
   return (
     <div className="flex">
@@ -65,16 +55,13 @@ const LandingPage = () => {
             <img
               src={pokeball}
               alt="pokeball"
-              className="absolute size-[20rem] rotate-12 mt-[10rem] mr-[8rem]"
+              className="absolute size-[20rem] rotate-12 mt-[10rem] mr-[8rem] shinning"
             />
             <img
-              // src={`https://img.pokemondb.net/artwork/large/${name}.jpg`}
               src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${ids}.png`}
               alt="image"
-              className="size-[300px] mt-10 z-10 drop-shadow-xl"
+              className="size-[280px] mt-10 z-10 drop-shadow-xl"
             />
-            {/* <div className="button cursor-pointer absolute"></div> */}
-            {/* {data ? <Button /> : null} */}
             <h1 className="p-6 absolute right-0 bottom-0 text-white">#{ids}</h1>
           </div>
           <div className="card2 text-right p-10 space-y-4">
@@ -113,7 +100,9 @@ const LandingPage = () => {
                   <div
                     className="h-2 bg-orange-500"
                     style={{
-                      width: `${item.base_stat}%`,
+                      width: `${
+                        item.base_stat > "100" ? "100" : item.base_stat
+                      }%`,
                       backgroundColor: backgroundColors[types],
                     }}
                   ></div>
