@@ -1,3 +1,25 @@
+import { BsFillNutFill } from "react-icons/bs";
+import {
+  FaBug,
+  FaDragon,
+  FaFeather,
+  FaFire,
+  FaFistRaised,
+  FaLeaf,
+  FaRegCircle,
+  FaSkull,
+  FaSnowflake,
+} from "react-icons/fa";
+import {
+  GiClayBrick,
+  GiFairyWings,
+  GiFluffySwirl,
+  GiMountaintop,
+} from "react-icons/gi";
+import { IoWater } from "react-icons/io5";
+import { LiaGhostSolid } from "react-icons/lia";
+import { MdDarkMode, MdElectricBolt } from "react-icons/md";
+
 export type ColorProps = {
   water: string;
   electric: string;
@@ -20,6 +42,27 @@ export type ColorProps = {
   [key: string]: string;
 };
 
+export type TypeIconProps = {
+  water: JSX.Element;
+  electric: JSX.Element;
+  fire: JSX.Element;
+  bug: JSX.Element;
+  dark: JSX.Element;
+  dragon: JSX.Element;
+  fairy: JSX.Element;
+  fighting: JSX.Element;
+  flying: JSX.Element;
+  ghost: JSX.Element;
+  normal: JSX.Element;
+  grass: JSX.Element;
+  ground: JSX.Element;
+  ice: JSX.Element;
+  poison: JSX.Element;
+  psychic: JSX.Element;
+  rock: JSX.Element;
+  steel: JSX.Element;
+};
+
 export const backgroundColors: ColorProps = {
   water: "#6493eb",
   electric: "#f9cf30",
@@ -39,4 +82,25 @@ export const backgroundColors: ColorProps = {
   psychic: "#FB5584",
   rock: "#B69E31",
   steel: "#B7B9D0",
+};
+
+export const TypeIcon: TypeIconProps = {
+  water: <IoWater />,
+  electric: <MdElectricBolt />,
+  fire: <FaFire />,
+  bug: <FaBug />,
+  dark: <MdDarkMode />,
+  dragon: <FaDragon />,
+  fairy: <GiFairyWings />,
+  fighting: <FaFistRaised />,
+  flying: <FaFeather />,
+  ghost: <LiaGhostSolid />,
+  normal: <FaRegCircle />,
+  grass: <FaLeaf />,
+  ground: <GiMountaintop />,
+  ice: <FaSnowflake />,
+  poison: <FaSkull />,
+  psychic: <GiFluffySwirl />,
+  rock: <GiClayBrick />,
+  steel: <BsFillNutFill />,
 };

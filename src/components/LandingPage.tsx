@@ -1,4 +1,9 @@
-import { ColorProps, backgroundColors } from "../hooks/colorType";
+import {
+  ColorProps,
+  TypeIcon,
+  TypeIconProps,
+  backgroundColors,
+} from "../hooks/colorType";
 import usePokemonFetch from "../hooks/usePokemonFetch";
 import pokeball from "../assets/pokeball.png";
 import "../index.css";
@@ -75,21 +80,24 @@ const LandingPage = () => {
                 <FaRuler />
                 {height * 10} cm | height
               </span>
-              <span className="flex items-center justify-end gap-3 pb-5">
+              <span className="flex items-center justify-end gap-3 pb-1">
                 {moves?.map((move: abilities, index: number) => (
                   <i key={index}>{move.ability.name}</i>
                 ))}
                 | moves
               </span>
-              {data?.pokemon.types.map((t: types, index: number) => (
-                <span
-                  key={index}
-                  className="text-white pr-4 pl-4 p-2 rounded-full mr-1"
-                  style={{ backgroundColor: backgroundColors[t.type.name] }}
-                >
-                  {t.type.name}
-                </span>
-              ))}
+              <div className="flex gap-3 justify-end">
+                {data?.pokemon.types.map((t: types, index: number) => (
+                  <div
+                    key={index}
+                    className="text-white pr-4 pl-4 p-2 rounded-full w-30 flex items-center gap-1"
+                    style={{ backgroundColor: backgroundColors[t.type.name] }}
+                  >
+                    {t.type.name}
+                    <h1>{TypeIcon[t.type.name as keyof TypeIconProps]}</h1>
+                  </div>
+                ))}
+              </div>
             </>
             <p className=" text-center pt-[1rem]">{description}</p>
             {stats?.map((item: statsProps, index: number) => (
